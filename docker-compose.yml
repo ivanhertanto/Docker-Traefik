@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  traefik:
+    image: traefik:v2.2  # Ganti versi sesuai kebutuhan
+    container_name: traefik
+    command:
+      - --api.insecure=true
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --entrypoints.internal.address=:8080
+    ports:
+      - "80:80"         # Port eksternal untuk HTTP
+      - "443:443"       # Port eksternal untuk HTTPS
+      - "8080:8080"     # Port eksternal untuk Traefik Dashboard (internal)
+    networks:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - $PWD/traefik.toml:/traefik.toml
+      - $PWD/traefik_dynamic.toml:/traefik_dynamic.toml
+      - $PWD/acme.json:/acme.json
+
+networks:
+  web:
+    driver: bridge
