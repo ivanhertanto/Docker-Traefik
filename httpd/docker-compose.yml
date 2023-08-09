@@ -1,0 +1,23 @@
+version: "3"
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+services:
+  httpd:
+    image: httpd:latest
+    container_name: httpd
+    restart: always
+    labels:
+      - traefik.http.routers.httpd.rule=Host(`ivan.click`, `www.ivan.click`)
+      - traefik.http.routers.httpd.tls=true
+      - traefik.http.routers.httpd.tls.certresolver=lets-encrypt
+      - traefik.port=80
+    # volumes:
+    #   - ../../public/:/usr/local/apache2/htdocs
+    networks:
+      - web
+      # - internal
