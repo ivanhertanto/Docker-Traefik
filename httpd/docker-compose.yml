@@ -3,16 +3,16 @@ version: "3"
 networks:
   web:
     external: true
-  internal:
-    external: false
+  # internal:
+  #   external: false
 
 services:
   httpd:
-    image: httpd:latest
-    container_name: httpd
-    restart: always
+    image: httpd:latest     # docker image dapat dicari pada hub.docker.io
+    container_name: httpd   # Nama container
+    restart: always         
     labels:
-      - traefik.http.routers.httpd.rule=Host(`ivan.click`, `www.ivan.click`)
+      - traefik.http.routers.httpd.rule=Host(`ivan.click`, `www.ivan.click`)  # domain tujuan
       - traefik.http.routers.httpd.tls=true
       - traefik.http.routers.httpd.tls.certresolver=lets-encrypt
       - traefik.port=80
