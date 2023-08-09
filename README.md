@@ -80,3 +80,22 @@ atau bisa dengan mengunakan `docker-compose` pada repositori ini:
 ```
 docker-compose up -d
 ```
+
+Langkah 3 — Mendaftarkan Kontainer dengan Traefik
+
+Dengan kontainer Traefik berjalan, Anda siap menjalankan aplikasi di belakangnya. Mari jalankan kontainer-kontainer berikut di belakang Traefik:
+
+1. httpd
+2. Adminer
+
+
+Anda akan mengelola kedua aplikasi ini dengan Docker Compose menggunakan berkas docker-compose.yml pada folder [httpd.](httpd/README.md)
+
+---
+## Kesimpulan
+
+Dalam panduan ini, Anda mengkonfigurasi Traefik v2 untuk memproksi permintaan ke aplikasi lain dalam kontainer Docker.
+
+Konfigurasi deklaratif Traefik pada level kontainer aplikasi membuatnya mudah untuk mengkonfigurasi layanan lebih lanjut, dan tidak perlu merestart kontainer traefik ketika Anda menambahkan aplikasi baru untuk memproksikan lalu lintas karena Traefik langsung mendeteksi perubahan tersebut melalui berkas soket Docker yang sedang dimonitoring.
+
+Untuk mempelajari lebih lanjut tentang apa yang dapat Anda lakukan dengan Traefik v2, silakan kunjungi [dokumentasi resmi Traefik.](https://doc.traefik.io/traefik/)
