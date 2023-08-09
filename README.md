@@ -85,9 +85,7 @@ Langkah 3 — Mendaftarkan Kontainer dengan Traefik
 
 Dengan kontainer Traefik berjalan, Anda siap menjalankan aplikasi di belakangnya. Mari jalankan kontainer-kontainer berikut di belakang Traefik:
 
-1. httpd
-2. Adminer
-
+1. httpd - web server
 
 Anda akan mengelola kedua aplikasi ini dengan Docker Compose menggunakan berkas docker-compose.yml pada folder [httpd.](httpd/README.md)
 
