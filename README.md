@@ -17,7 +17,7 @@ Untuk dapat mengikuti langkah-langkah ini, Anda memerlukan hal-hal berikut:
 
 ## Langkah 1 — Mengkonfigurasi dan Menjalankan Traefik
 
-Traefik adalah project resmi Docker, dapat di lihat pada `hub.docker.io` untuk image dasar jadi kita hanya perlu konfigurasi sederhana.
+Traefik adalah project resmi Docker, dapat di lihat pada `hub.docker.com` untuk image dasar jadi kita hanya perlu konfigurasi sederhana.
 
 Konfigurasi sederhana ini yaitu pengaturan kata sandi terenkripsi agar Anda dapat mengakses dasbor pemantauan.
 
