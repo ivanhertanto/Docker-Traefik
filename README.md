@@ -1,10 +1,10 @@
-# Panduan Langkah demi Langkah Traefik 2.2 + Docker Pendahuluan
+# Panduan Langkah demi Langkah Traefik 2.2 + HTTPD
 
 ## Dalam panduan ini, kita akan menjalani langkah-langkah berikut:
 
 1. Menyiapkan dan mengonfigurasi Traefik dalam wadah Docker
 2. Menyiapkan Let's Encrypt untuk sertifikat HTTPS otomatis
-3. Mendeploy layanan sederhana (Portainer) dan mengeksposnya ke internet
+3. Mendeploy layanan sederhana HTTPD dan mengeksposnya ke internet
 
 ## Prasyarat
 
