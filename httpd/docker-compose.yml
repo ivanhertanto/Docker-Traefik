@@ -8,7 +8,7 @@ networks:
 
 services:
   httpd:
-    image: httpd:latest     # docker image dapat dicari pada hub.docker.io
+    image: httpd:alpine     # docker image dapat dicari pada hub.docker.io
     container_name: httpd   # Nama container
     restart: always         
     labels:
