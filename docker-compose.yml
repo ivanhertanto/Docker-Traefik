@@ -3,7 +3,7 @@ version: '3.9'
 services:
   traefik:
     image: traefik:v2.2  # Ganti versi sesuai kebutuhan
-    container_name: traefik
+    container_name: traefik-w-ssh
     command:
       - --api.insecure=true
       - --providers.docker=true
